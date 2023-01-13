@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<table width="200" height="300">
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+
+  {{form.as_p}}
+  <input style="background-color:black; color:beige;border-radius: 10px;" type="submit" value="SAVE">
+</form>
+</table>
+{% endblock %}
